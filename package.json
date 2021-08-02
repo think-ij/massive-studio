@@ -1,0 +1,30 @@
+{
+  "name": "massive-studio",
+  "version": "1.0.0",
+  "description": "Front-end monitoring tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/think-ij/massive-studio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/think-ij/massive-studio/issues"
+  },
+  "homepage": "https://github.com/think-ij/massive-studio#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {},
+  "keywords": []
+}

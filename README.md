@@ -1,4 +1,4 @@
 # massive-studio
 massive studio, data visualization tool
 
-## welcome, massive-studio 
+## welcome, massive-studio for legacy (mpa)
