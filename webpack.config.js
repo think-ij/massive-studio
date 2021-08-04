@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // mini-css-extract-plugin 로드
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/assets/js/main.js', './src/assets/scss/style.scss'],
+  //   entry: ['./src/assets/js/main.js', './src/assets/scss/style.scss'],
+  entry: ['./src/main.js', './src/assets/scss/style.scss'],
   output: { path: path.resolve(__dirname, 'dist'), filename: 'bundle.app.js' },
 
   // setting plugin
@@ -26,6 +28,10 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+      },
       {
         // 대상 파일 지정
         test: /\.s(a?c)ss$/, // /\.(sa|sc|c)ss$/, /\.s(a?c)ss$/,
@@ -59,5 +65,6 @@ module.exports = {
     open: true,
     hot: true,
   },
+  devtool: 'source-map',
   mode: 'development',
 };
